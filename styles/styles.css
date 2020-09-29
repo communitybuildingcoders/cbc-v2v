@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d4c4a1;
+}
+
+header {
+    padding: 1rem;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+    height: 25px;
+    width: 100%;
+    background: rgb(175,168,22);
+    background: linear-gradient(90deg, 
+                rgba(175,168,22,1) 5%, 
+                rgba(0,0,0,1) 15%, 
+                rgba(10,136,64,1) 25%, 
+                rgba(175,168,22,1) 35%, 
+                rgba(22,132,175,1) 50%, 
+                rgba(175,168,22,1) 65%, 
+                rgba(10,136,64,1) 75%, 
+                rgba(0,0,0,1) 85%, 
+                rgba(175,168,22,1) 95%);  
+}
+
+#burger {
+    display: none;
+}
+
+#menu {
+    padding: 1rem 0;
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu a {
+    padding: 1rem 2rem;
+    color: #000;
+    text-decoration: none;
+}
+    #menu a.current {
+        background-color: #a89e70;
+    }
+
+    #menu a:hover {
+        text-decoration: underline;
+        background-color: #a89e70;
+    }
+
+    #menu a:active {
+        text-decoration: underline;
+        background-color: #a89e70;
+    }
+
+@media (max-width: 800px) {
+    #burger {
+        display: block;
+        cursor: pointer;
+        height: 27px;
+        width: 27px;
+        margin: 50px;
+        overflow: visible;
+        position: relative;
+        z-index:2;
+    }
+    
+        #burger span,
+        #burger span:before,
+        #burger span:after {
+            background: #000;
+            display: block;
+            height: 4px;
+            opacity: 1;
+            position: absolute;
+            transition: 0.3s ease-in-out;
+        }
+    
+        #burger span:before,
+        #burger span:after {
+            content: "";
+        }
+    
+        #burger span {
+            right: 0px;
+            top: 13px;
+            width: 30px;
+        }
+    
+        #burger span:before {
+            left: 0px;
+            top: -10px;
+            width: 30px;
+        }
+    
+        #burger span:after {
+            left: 0px;
+            top: 10px;
+            width: 30px;
+        }
+      
+        #burger.close span {
+            background-color: #fff;
+            transform: rotate(-45deg);
+            top: 13px;
+            width: 27px;
+        }
+      
+        #burger.close span:before {
+            background-color: #fff;
+            top: 0px;
+            transform: rotate(90deg);
+            width: 27px;
+        }
+    
+        #burger.close span:after {
+            top: 0px;
+            left:0;
+            transform: rotate(90deg);
+            opacity:0;
+            width:0;
+        }
+      
+    #menu{
+        display: none;
+        z-index:1;
+        min-width:100%;
+        min-height:100%;
+        position: fixed;
+        top:0;
+        height:0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        padding-top:20px;
+        transition: all 0.3s ease-in-out;  
+    }
+      
+        #menu.overlay{
+            display: inline;
+            visibility: visible;
+            opacity: 1;
+            padding-top:100px;
+            background:#5a4d2a;
+        }
+
+    #menu ul {
+        flex-direction: column;
+    }
+      
+    #menu li{
+        list-style:none;
+    }
+    
+    #menu a{
+        color:#fff;
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-decoration: none;
+      }   
+        #menu a:hover{
+            background-color: #5a4d2a;
+        }  
+
+        #menu a:active{
+            background-color: #5a4d2a;
+        }
+
+        #menu a.current{
+            background-color: #5a4d2a;
+        }  
+}
+
