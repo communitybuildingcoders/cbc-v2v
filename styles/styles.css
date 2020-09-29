@@ -5,28 +5,6 @@ body {
     background-color: #d4c4a1;
 }
 
-header {
-    padding: 1rem;
-}
-
-hr {
-    padding: 0;
-    margin: 0;
-    height: 25px;
-    width: 100%;
-    background: rgb(175,168,22);
-    background: linear-gradient(90deg, 
-                rgba(175,168,22,1) 5%, 
-                rgba(0,0,0,1) 15%, 
-                rgba(10,136,64,1) 25%, 
-                rgba(175,168,22,1) 35%, 
-                rgba(22,132,175,1) 50%, 
-                rgba(175,168,22,1) 65%, 
-                rgba(10,136,64,1) 75%, 
-                rgba(0,0,0,1) 85%, 
-                rgba(175,168,22,1) 95%);  
-}
-
 #burger {
     display: none;
 }
@@ -43,7 +21,7 @@ hr {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
 }
 
@@ -69,6 +47,141 @@ hr {
         text-decoration: underline;
         background-color: #a89e70;
     }
+
+header {
+    width: 80vw;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+    height: 25px;
+    width: 100%;
+    background: rgb(175,168,22);
+    background: linear-gradient(90deg, 
+                rgba(175,168,22,1) 5%, 
+                rgba(0,0,0,1) 15%, 
+                rgba(10,136,64,1) 25%, 
+                rgba(175,168,22,1) 35%, 
+                rgba(22,132,175,1) 50%, 
+                rgba(175,168,22,1) 65%, 
+                rgba(10,136,64,1) 75%, 
+                rgba(0,0,0,1) 85%, 
+                rgba(175,168,22,1) 95%);  
+}
+
+main {
+    width: 80vw;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.events {
+    margin: 0 auto;
+    display: flex;
+}
+
+.fb-page {
+    margin: 1rem;
+}
+
+.calendar {
+    margin: 1rem;
+}
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#contact {
+	padding: 2rem;
+	margin: 2.5rem 0;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 1rem;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], 
+#contact input[type="email"], 
+#contact input[type="tel"], 
+#contact input[type="url"], 
+#contact textarea {
+	width: 100%;
+	border: 1px solid #5a4d2a;
+	background: #a89e70;
+	margin: 0 0 0.5rem;
+	padding: 1rem;
+}
+
+    #contact input[type="text"]:hover, 
+    #contact input[type="email"]:hover, 
+    #contact input[type="tel"]:hover, 
+    #contact input[type="url"]:hover, 
+    #contact textarea:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border: 1px solid #5a4d2a;
+    }
+
+#contact textarea {
+	height: 100px;
+	max-width: 100%;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+	cursor: pointer;
+	border: none;
+	background: #5a4d2a;
+	color: #fff;
+	margin: 0 0 0.5rem;
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+    #contact button[type="submit"]:hover {
+        background: #80734f;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #contact button[type="submit"]:active { 
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); 
+    }
+
+    #contact input:focus, #contact textarea:focus {
+        outline: 0;
+        border: 1px solid #000;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #000;
+    }
+
+    :-moz-placeholder {
+        color:#000;
+    }
+
+    ::-moz-placeholder {
+        color:#000;
+    }
+
+    :-ms-input-placeholder {
+        color:#000;
+    }
+
 
 @media (max-width: 800px) {
     #burger {
@@ -186,6 +299,13 @@ hr {
 
         #menu a.current{
             background-color: #5a4d2a;
-        }  
-}
+        } 
+        
+    .events {
+        flex-direction: column;
+    }
 
+    .calendar {
+        max-width: 100%;
+    }
+}
