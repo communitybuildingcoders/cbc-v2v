@@ -22,7 +22,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#" class="current">Contact</a></li>
-                    <li><a href="./">Events</a></li>
+                    <li><a href="events.html">Events</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,3 +36,31 @@
                 Sollicitudin nibh sit amet commodo nulla.
             </p>
         </header>
+
+        <main class="container">  
+            <form id="contact" action="" method="post">
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input name="name" id="name" placeholder="Your name" type="text">
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input name="email" id="email" placeholder="Your Email Address" type="email" required>
+                </fieldset>
+                <fieldset>
+                    <label for="phone">Phone Number</label>
+                    <input name="phone" id="phone" placeholder="Your Phone Number" type="tel">
+                </fieldset>
+                <fieldset>
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="message" placeholder="Type your Message Here...."required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form> 
+        </main>
+        
+        <script src="./js/script.js" async defer></script>
+    </body>
+</html>
