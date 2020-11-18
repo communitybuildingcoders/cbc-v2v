@@ -1,0 +1,59 @@
+/*
+    Sections listed in order of appearance, with global settings 
+    made into classes to apply to numerous elements in the DOM.
+
+    Please continue this organization to maintain standard 
+    coding best practices and DRY technique.
+*/
+
+
+body {
+    font-family: Times, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #333;
+}
+
+
+nav {
+    border-bottom: 1px solid #333;
+}
+
+
+.jumbotron {
+    background: url("./img/photo-1571795184552-5f1df723de54.jpeg") no-repeat center center;
+    color: #E5E5E5;
+}
+
+
+main {
+    max-width: 780px;
+}
+
+section {
+    background-color: #D0C3B4;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+
+button.btn {
+    background-color: #fff;
+    border: 1px solid #333;
+}
+
+
+/* 
+    globally repeated styles as classes
+*/
+.bg-block {
+    background-color: #EFEBE6;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
