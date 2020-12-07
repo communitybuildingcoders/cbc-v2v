@@ -23,7 +23,7 @@
                 <a class="nav-link" href="./howToHelp.html">How to Help</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Events</a>
+                <a class="nav-link" href="./events.html">Events</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
@@ -54,35 +54,35 @@
 
 
          <div class="form-container  bg-block" style="height:600px" >
-             <form class='pt-5' style='width:80%;margin:auto;'>
+             <form onsubmit="handleSubmit()" class='pt-5' style='width:80%;margin:auto;'>
                  <div class='form-group col-md-auto '>
-                    <input class='form-control'  placeholder="FIRST NAME *"/>
+                    <input class='form-control'  placeholder="FIRST NAME *" name="input" id='fname'/>
                  </div>
                  <div class='col-md-auto form-group '>
-                    <input class='form-control' placeholder="LAST NAME *" />
+                    <input class='form-control' placeholder="LAST NAME *" name="input" id='lname'/>
                  </div>
                  <div class='col-md-auto form-group' >
-                    <input class='form-control' placeholder="COMPANY *"/>
+                    <input class='form-control' placeholder="COMPANY *" name="input" id='company'/>
                  </div>
                  <div class='col-md-auto form-group'>
-                    <input class='form-control' placeholder="EMAIL *"/>
+                    <input class='form-control' placeholder="EMAIL *" name="input" id='email'/>
                  </div>
                  <div class='col-md-auto form-group'>
-                    <input class='form-control' placeholder="TELEPHONE *"/>
+                    <input class='form-control' placeholder="TELEPHONE *" name="input" id='telephone' />
                  </div>
                  <div class="col-md-auto ">
-                     <input type='checkbox' />
+                     <input type='checkbox' name="input" id='sponsor'/>
                      <label>YES, THIS IS ABOUT A SPONSORSHIP.</label>
                  </div>
                  <div class="col-md-auto">
-                    <input  type="checkbox"/>
+                    <input  type="checkbox" name="input" id='volunteer' />
                     <label>YES, THIS IS ABOUT VOLUNTEERING</label>
                  </div>
                  <div class="col-md-auto form-group">
-                    <textarea class='form-control' style="height:100px" placeholder="MESSAGE *"></textarea>
+                    <textarea class='form-control' style="height:100px" name="input" placeholder="MESSAGE *" id='message'></textarea>
                  </div>
                  <div class="col ">
-                     <button class="btn btn-outline-secondary">submit</button>
+                     <button class="btn btn-outline-secondary" id='submit'>submit</button>
                      <button class="btn btn-outline-secondary">cancel</button>
                  </div>
              </form>
@@ -104,7 +104,7 @@
          <div class="container my-5 py-5">
             <p>Vet to Vet &reg; is an independent non-profit organization 501c3 founded by Vets and made up of Veterans and Civilians to help Veterans. Vet to Vet &reg; is not affiliated or associated with the "operation of Vet2Vet" located at 24 Homewood Ave, North Providence, RI.</p>
         </div>
-      </main>
+      
     </main>
 
    
@@ -135,5 +135,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
