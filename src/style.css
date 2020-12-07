@@ -30,12 +30,6 @@ main {
 }
 
 
-
-
-
-
-
-
 section {
     background-color: #D0C3B4;
     border-top: 1px solid #333;
@@ -53,7 +47,13 @@ button.btn {
     border: 1px solid #333;
 }
 
+li:before{
+    content:"- "
+}
 
+ul{
+    list-style-type: none;
+}
 /* 
     globally repeated styles as classes
 */
