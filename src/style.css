@@ -6,34 +6,48 @@
     coding best practices and DRY technique.
 */
 
-
+/* GLOBAL SEMANTICS */
 body {
-    font-family: Times, 'Times New Roman', serif;
-    font-size: 16px;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
     color: #333;
 }
-
+@media (min-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+}
 
 nav {
+    font-family: Times, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    color: #333;
     border-bottom: 1px solid #333;
 }
 
-
-.jumbotron {
-    background: url("./img/photo-1571795184552-5f1df723de54.jpeg") no-repeat center center;
-    color: #E5E5E5;
+h1, h2, h3, h4, h5, h6 {
+    font-family: Times, 'Times New Roman', serif;
+    margin-bottom: 1rem;
 }
 
+img {
+    background: rgba(208, 195, 180, .9);
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
 
 main {
     max-width: 780px;
+    font-size: 1.5rem;
 }
-
 
 section {
     background-color: #D0C3B4;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
+    font-size: 1.5rem;
 }
 
 footer p {
@@ -41,26 +55,62 @@ footer p {
 }
 
 
+/* MAIN ANCHOR ELEMENTS */
+main a {
+    text-decoration: underline;
+    color: inherit;
+}
+main a:hover, 
+main a:active {
+    color: #837462;
+}
 
+
+/* GLOBAL STYLES */
+.bg-block {
+    background-color: #EFEBE6;
+}
+.small {
+    font-weight: inherit;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
 button.btn {
     background-color: #fff;
     border: 1px solid #333;
 }
-
-.vol-list li:before{
-    content:"- "
+button.btn:hover {
+    background-color: #9c9285;
+    color: #fff;
 }
 
-ul{
+
+/* JUMBOTRON */
+.jumbotron {
+    background: rgba(208, 195, 180) url("./img/photo-1571795184552-5f1df723de54.jpeg") center center no-repeat;
+    background-size: cover;
+    opacity: .9;
+    color: #E5E5E5;
+    height: 400px;
+    max-height: 25vh;
+}
+#jumbo-xl {
+    height: 800px;
+    max-height: 95vh;
+}
+#jumbo-text {
+    background: rgba(0, 0, 0, .6)
+}
+
+
+/* VOLUNTEER PAGE */ 
+ul {
     list-style-type: none;
 }
-/* 
-    globally repeated styles as classes
-*/
-.bg-block {
-    background-color: #EFEBE6;
+.vol-list li {
+    margin-bottom: .75rem;
 }
-
-.text-uppercase {
-    text-transform: uppercase;
+.vol-list li:before{
+    content:"— "
 }

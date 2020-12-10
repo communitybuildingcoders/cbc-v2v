@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./src/style.css">
-  <title>Vet to Vet | Events</title>
+  <title>Vet to Vet | Contact Us</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light text-uppercase">
@@ -22,13 +22,13 @@
                 <a class="nav-link" href="./volunteer.html">How to Help</a>
                 </li>
                 <li class="nav-item mr-lg-4">
-                <a class="nav-link active" href="./events.html">Events <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="./events.html">Events</a>
                 </li>
                 <li class="nav-item mr-lg-4">
                 <a class="nav-link" href="./about.html">About Us</a>
                 </li>
                 <li class="nav-item mr-lg-4">
-                    <a class="nav-link" href="./contact.html">Contact</a>
+                    <a class="nav-link active" href="./contact.html">Contact <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -38,15 +38,72 @@
 
     <main class='mx-auto'>
         <div class="container mb-5 p-5 px-md-0">
-            <h1>Join us for bingo games, barbeques, and holiday events.</h1>
+            <h1>Sign up to volunteer or register as a sponsor.</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae
-                laoreet mauris, at blandit urna. Donec sit amet ullamcorper ex. Sed
-                faucibus leo nec posuere vestibulum. Aenean eu tortor quis quam. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae laoreet mauris, at blandit urna. 
+                Donec sit amet ullamcorper ex. Sed faucibus leo nec posuere vestibulum. Aenean eu tortor quis quam. 
             </p>
-        </div>
+         </div>
 
-        <div class="container my-5 p-5 px-md-0">
+
+         <div class="container bg-block mb-5">
+             <form id="contact-form" onsubmit="handleSubmit()"  method="post" class="py-5 px-3">
+                 <div class='form-group'>
+                    <label class="form-control sr-only">Name</label>
+                    <input class='form-control'  placeholder="NAME *" name="input" id='fname' required />
+                 </div>
+                 <div class='form-group'>
+                    <label class="form-control sr-only">Company</label>
+                    <input class='form-control' placeholder="COMPANY *" name="input" id='company' />
+                 </div>
+                 <div class='form-group'>
+                    <label class="form-control sr-only">Email</label>
+                    <input class='form-control' placeholder="EMAIL *" name="input" id='email' required />
+                 </div>
+                 <div class='form-group'>
+                    <label class="form-control sr-only">Telephone</label>
+                    <input class='form-control' placeholder="TELEPHONE *" name="input" id='telephone' />
+                 </div>
+                 <div class="form-group form-check small">
+                     <input type='checkbox' class="form-check-input" name="input" value="sponsor" id='sponsor' />
+                     <label class="form-check-label" for="sponsor">Yes, this is about sponsorship.</label>
+                 </div>
+                 <div class="form-group form-check small">
+                    <input  type="checkbox" class="form-check-input" name="input" value="volunteer" id='volunteer' />
+                    <label class="form-check-label" for="volunteer">Yes, this is about volunteering.</label>
+                 </div>
+                 <div class="form-group mb-5">
+                    <textarea class='form-control' rows="8" name="input" placeholder="MESSAGE *" id='message' required></textarea>
+                 </div>
+                 <div class="form-group">
+                     <button class="btn btn-outline-secondary bg-block px-5" id='submit'>Send</button>
+                     <a href="" class="btn btn-link text-muted mx-5">Cancel</a>
+                 </div>
+             </form>
+         </div>
+
+         <div class="container mb-5 py-5">
+            <div class="row align-items-stretch">
+                <div class="col-sm p-5 mb-5 mb-sm-0">
+                    <p>Vet 2 Vet &reg;</p>
+                    <address>
+                        Duns#: 084418719<br>
+                        25 Highland Park Village<br>
+                        Suite 100-411<br>
+                        Dallas, TX 75205
+                    </address>
+                    <address></address>
+                        214.727.9854
+                        <a href="mailto:dcc@vettovetusa.com">dcc&commat;vettovetusa.com</a>
+                    </address>
+                </div>
+                <div class="col-sm">
+                    <img class="w-100 h-100" src="./src/img/photo-1464660756002-dd9f9a92b01b.jpeg"/>
+                </div>
+            </div>
+         </div>
+
+         <div class="container my-5 p-5 px-md-0">
             <p>
                 Vet to Vet &reg; is an independent non-profit organization 501c3 founded by Vets and made up of Veterans and Civilians to help Veterans. 
                 Vet to Vet &reg; is not affiliated or associated with the "operation of Vet2Vet" located at 24 Homewood Ave, North Providence, RI.
@@ -55,7 +112,7 @@
     </main>
 
     <section class="my-5">
-        <div class="container p-5 px-md-0 text-center">
+        <div class="container text-center p-5 px-md-0">
             <p class="mb-4">Show your support by donating today!</p>
             <button class="btn btn-md small text-uppercase px-5">Donate</button>
         </div>
@@ -83,5 +140,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
