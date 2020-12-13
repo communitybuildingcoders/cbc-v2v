@@ -38,8 +38,7 @@ function handleSubmit(e) {
   body += formData.sponsor  ?  "\nSponsor: " + formData.sponsor : "\nSponsor: No";
   body += "\nMessage: " + formData.message;
 
-  console.log(formData);
-
+  
   console.log(body);
 
   form.setAttribute(
